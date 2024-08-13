@@ -10,3 +10,7 @@ Guest IP:10.0.2.15
 Install SHH on windows: Powershell with administrator
 Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
 Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+Access SSH
+ssh nht@127.0.0.120
+type yes
+type password
