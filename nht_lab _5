@@ -1,15 +1,22 @@
-sudo apt install openssh-server -y
-sudo systemctl status ssh
-sudo systemctl start ssh
-ip -c -4 addr
-Config netwrok “Port Forwarding Rules”
+# Install open ssh on Ubuntu  
+nht@nhtserver:~$ sudo apt install openssh-server -y
+# Check status open ssh
+nht@nhtserver:~$ sudo systemctl status ssh
+# Start ssh service
+nht@nhtserver:~$ sudo systemctl start ssh
+# Check ip address VM
+nht@nhtserver:~$ ip -c -4 addr
+# Config Network “Port Forwarding” ssh on VM
 Host IP: 127.0.0.120
 Host Port: 22
 Guest Port: 22
 Guest IP:10.0.2.15
-Install SHH on windows: Powershell with administrator
-Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0
-Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+# Install Open ssh on windows: Windows Powershell rus as administrator
+PS C:\WINDOWS\system32> Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0 
+# Check Open ssh service
+PS C:\WINDOWS\system32> Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
+# Access ubuntu withSH
+PS C:\WINDOWS\system32> ssh nht@127.0.0.120
 Access SSH
 ssh nht@127.0.0.120
 type yes
