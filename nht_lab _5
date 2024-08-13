@@ -17,7 +17,7 @@ PS C:\WINDOWS\system32> Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.
 PS C:\WINDOWS\system32> Get-WindowsCapability -Online | Where-Object Name -like 'OpenSSH*'
 # Access ubuntu withSH
 PS C:\WINDOWS\system32> ssh nht@127.0.0.120
-Access SSH
-ssh nht@127.0.0.120
-type yes
-type password
+# Disconnect ssh
+nht@nhtserver:~$ exit  
+or Ctrl+d
+
